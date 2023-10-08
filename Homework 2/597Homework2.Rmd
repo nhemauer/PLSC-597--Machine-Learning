@@ -1,0 +1,17 @@
+---
+title: "597 Homework 2"
+output: html_notebook
+---
+
+
+```{r}
+
+library(dplyr)
+library(janitor)
+
+data <- read.csv('C:/Users/ndhem/Downloads/Homework2Data597.csv')
+
+logit <- glm(data = data, family = 'binomial', vote18 ~ depression + female + age + educ + income + attend + married + unemployed + black + hispanic)
+summary(logit)
+
+```
